@@ -1,0 +1,67 @@
+// General Classes
+
+// Global Classes
+
+.container {
+    width: 100%;
+    max-width: calc($containerWidth + $containerPadding * 2);
+    padding: 0 $containerPadding;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.none {
+    display: none !important;
+}
+
+// Button Classes
+
+// Examples
+
+%icon-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        font-size: 1.5rem;
+        color: $gray5;
+        font-weight: $normal;
+        line-height: normal;
+    }
+}
+
+// Pop-Up Classes
+
+.pop-up {
+    position: absolute;
+    top: calc(100% + 0.8125rem);
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0);
+    padding: 0.7rem 1.2rem;
+    background: $blue2;
+    border: 1px solid $primaryColor;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(calc(-50% - 1.875rem), -50%);
+        transform: rotate(-45deg);
+        height: 1.875rem;
+        width: 1.875rem;
+        background: $blue2;
+        border: 1px solid $primaryColor;
+    }
+
+    &__message {
+        color: $gray1;
+    }
+}

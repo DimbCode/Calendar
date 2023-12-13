@@ -1,0 +1,578 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"), url("../fonts/Roboto-Medium.svg#Roboto-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-Bold.svg#Roboto-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "calendare-icons";
+  src: url("../icon-fonts/calendare-icons.eot?eeo3sj");
+  src: url("../icon-fonts/calendare-icons.eot?eeo3sj#iefix") format("embedded-opentype"), url("../icon-fonts/calendare-icons.ttf?eeo3sj") format("truetype"), url("../icon-fonts/calendare-icons.woff?eeo3sj") format("woff"), url("../icon-fonts/calendare-icons.svg?eeo3sj#calendare-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-]:before, [class*=" icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "calendare-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ic-down-arrow:before {
+  content: "\e901";
+}
+
+.icon-ic-side-arrow:before {
+  content: "\e902";
+}
+
+.icon-ic-skip:before {
+  content: "\e903";
+}
+
+.icon-ic-calendare:before {
+  content: "\e900";
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-size: 1.1875rem;
+  line-height: normal;
+}
+
+.wrapper {
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  min-height: 100vh;
+  background: white;
+}
+
+svg, img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 100px #2961FE;
+          box-shadow: inset 0 0 100px #2961FE;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+a, button {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+  background: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a:hover, button:hover {
+  opacity: 0.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 47.935rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.none {
+  display: none !important;
+}
+
+.item-select__arrow-btn, .input-section__delete-btn, .input-section__open-popup-btn, .calendare__open-popup-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.item-select__arrow-btn::before, .input-section__delete-btn::before, .input-section__open-popup-btn::before, .calendare__open-popup-btn::before {
+  font-size: 1.5rem;
+  color: rgb(67, 76, 78);
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pop-up {
+  position: absolute;
+  top: calc(100% + 0.8125rem);
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 0.7rem 1.2rem;
+  background: #D4F6FF;
+  border: 1px solid #2961FE;
+}
+.pop-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(calc(-50% - 1.875rem), -50%);
+          transform: translate(calc(-50% - 1.875rem), -50%);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 1.875rem;
+  width: 1.875rem;
+  background: #D4F6FF;
+  border: 1px solid #2961FE;
+}
+.pop-up__message {
+  color: #434C4E;
+}
+
+.calendare-block {
+  width: 100%;
+  padding-top: 2rem;
+}
+.calendare-block__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+.calendare-block__row {
+  width: 100%;
+}
+.calendare-block__row:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.31rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.31rem;
+}
+.calendare-block__row_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.calendare-block__buttons {
+  margin-top: 0.2rem;
+  background: #F6F6F6;
+  padding: 0.88rem 0.62rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1.25rem;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.calendare-block__buttons_half {
+  width: calc(50% - 0.31rem);
+}
+.calendare-block__btn_reset {
+  color: #B2B4B4;
+}
+.calendare-block__btn_reset_active {
+  color: #2961FE;
+}
+.calendare-block__btn_apply {
+  padding: 0.25rem 0.5rem;
+  background: #B2B4B4;
+  color: white;
+}
+.calendare-block__btn_apply_active {
+  background: #2961FE;
+}
+
+.calendare__item-select {
+  border-bottom: none !important;
+}
+
+.input-section {
+  padding: 0.31rem;
+  background: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #969FA8;
+  gap: 0.25rem;
+  border-bottom: none;
+}
+.input-section_white {
+  background: white;
+}
+.input-section_blue .input-section__left-section {
+  background: #D4F6FF;
+  padding: 0.59rem 0.81rem;
+}
+.input-section_blue .input-section__right-section {
+  background: #D4F6FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.input-section_blue .calendare-input__input {
+  display: none;
+}
+.input-section_blue .calendare-input__value {
+  display: inline-block;
+}
+.input-section_skip-open .input-section__right-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.input-section__left-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.6rem 1.44rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.5rem;
+}
+.input-section__right-section {
+  max-width: 2.125rem;
+  width: 100%;
+  position: relative;
+  display: none;
+}
+.input-section__delete-btn {
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.input-section__delete-btn::before {
+  color: rgb(40, 121, 255);
+}
+.input-section__delete-btn:hover {
+  background: #2961FE;
+  opacity: 1;
+}
+.input-section__delete-btn:hover::before {
+  color: white;
+}
+.input-section__pop-up {
+  max-width: 11.35rem;
+  width: 11.35rem;
+}
+
+.calendare-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3rem;
+}
+.calendare-input__text {
+  color: #434C4E;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 300;
+}
+.calendare-input__input {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 700;
+  background: none;
+  max-width: 7.3rem;
+}
+.calendare-input__input::-webkit-input-placeholder {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #B2B4B4;
+  font-weight: 400;
+}
+.calendare-input__input::-moz-placeholder {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #B2B4B4;
+  font-weight: 400;
+}
+.calendare-input__input:-ms-input-placeholder {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #B2B4B4;
+  font-weight: 400;
+}
+.calendare-input__input::-ms-input-placeholder {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #B2B4B4;
+  font-weight: 400;
+}
+.calendare-input__input::placeholder {
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #B2B4B4;
+  font-weight: 400;
+}
+.calendare-input__value {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: none;
+}
+
+.item-select {
+  width: 100%;
+  padding: 0.69rem 0.38rem;
+  border: 0.5px solid #969FA8;
+  background: white;
+  position: relative;
+}
+.item-select__open-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.item-select__arrow-btn::before {
+  font-size: 1.8125rem;
+  color: rgb(22, 30, 32);
+}
+.item-select__arrow-btn_next::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.item-select__arrow-btn_disabled::before {
+  color: rgb(150, 159, 168);
+}
+.item-select__value {
+  color: #2961FE;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.item-select__value::before {
+  color: rgb(22, 30, 32);
+  font-size: 1.8125rem;
+}
+.item-select__hidden-section {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: white;
+  text-align: center;
+  border: 0.5px solid #969FA8;
+}
+.item-select__list > *:not(:last-child) {
+  border-bottom: 0.5px solid #969FA8;
+}
+.item-select__list-value {
+  width: 100%;
+  padding: 0.88rem;
+  color: #2961FE;
+}
+.item-select__list-value_current {
+  background: #EFF0F0;
+}
+
+.calendare-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.5px solid #969FA8;
+}
+.calendare-table__cell {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.91rem;
+  background: #F6F6F6;
+  border: 0.5px solid #969FA8;
+  color: #6CA3FE;
+}
+.calendare-table__cell_title {
+  background: none;
+  color: #000000;
+}
+.calendare-table__cell_empty {
+  background: none;
+  border: none;
+  border-top: 0.5px solid #969FA8;
+  border-bottom: 0.5px solid #969FA8;
+}
+.calendare-table__cell_opacity-active {
+  color: #2961FE;
+  background: #D4F6FF;
+}
+.calendare-table__cell_active {
+  background: #2961FE;
+  color: white;
+}

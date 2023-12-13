@@ -1,0 +1,318 @@
+// Calendare Styles
+
+.calendare-block {
+    width: 100%;
+    padding-top: 2rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__row {
+        width: 100%;
+
+        &:first-child {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.31rem;
+        }
+
+        &_buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__buttons {
+        margin-top: 0.2rem;
+        background: $gray3;
+        padding: 0.88rem 0.62rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.25rem;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+        &_half {
+            width: calc(50% - 0.31rem);
+        }
+    }
+
+    &__btn {
+
+        &_reset {
+            color: $gray2;
+
+            &_active {
+                color: $primaryColor;
+            }
+        }
+
+        &_apply {
+            padding: 0.25rem 0.5rem;
+            background: $gray2;
+            color: $white;
+
+            &_active {
+                background: $primaryColor;
+            }
+        }
+    }
+}
+     
+.calendare {
+
+    &__open-popup-btn {
+        @extend %icon-btn;
+    }
+
+    &__item-select {
+        border-bottom: none !important;
+    }
+}
+
+.input-section {
+    padding: 0.31rem;
+    background: $gray3;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $gray4;
+    gap: 0.25rem;
+    border-bottom: none;
+
+    &_white {
+        background: $white;
+    }
+
+    &_blue {
+
+        .input-section__left-section {
+            background: $blue2;
+            padding: 0.59rem 0.81rem;
+        }
+
+        .input-section__right-section {
+            background: $blue2;
+            display: flex;
+        }
+
+        .calendare-input__input {
+            display: none;
+        }
+
+        .calendare-input__value {
+            display: inline-block;
+        }
+
+    }
+
+    &_skip-open {
+
+        .input-section__right-section {
+            display: flex;
+        }
+
+    }
+    
+    &__left-section {
+        width: 100%;
+        display: flex;
+        padding: 0.6rem 1.44rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    &__right-section {
+        max-width: 2.125rem;
+        width: 100%;
+        position: relative;
+        display: none;
+    }
+
+    &__open-popup-btn {
+        @extend %icon-btn;
+    }
+
+    &__delete-btn {
+        @extend %icon-btn;
+        width: 100%;
+        padding: 0.5rem 0.3rem;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            color: $blue3;
+        }
+
+        &:hover {
+            background: $primaryColor;
+            opacity: 1;
+
+            &::before {
+                color: $white;
+            }
+        }
+    }
+
+    &__pop-up {
+        max-width: 11.35rem;
+        width: 11.35rem;
+    }
+}
+
+.calendare-input {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    &__text {
+        color: $gray1;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: $light;
+    }
+
+    &__input {
+        font-size: 1.1875rem;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: $bold;
+        background: none;
+        max-width: 7.3rem;
+
+        &::placeholder {
+            font-size: 1.1875rem;
+            text-transform: uppercase;
+            color: $gray2;
+            font-weight: $normal;
+        }
+        
+    }
+
+    &__value {
+        text-transform: uppercase;
+        font-weight: $bold;
+        display: none;
+    }
+}
+
+.error {
+
+    &__message {
+    }
+}
+
+.item-select {
+    width: 100%;
+    padding: 0.69rem 0.38rem;
+    border: 0.5px solid $gray4;
+    background: $white;
+    position: relative;
+
+    &__open-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__arrow-btn {
+        @extend %icon-btn;
+
+        &::before {
+            font-size: 1.8125rem;
+            color: $gray6;
+        }
+
+        &_next {
+
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+        &_disabled {
+            
+            &::before {
+                color: $gray9;
+            }
+        }
+    }
+
+    &__value {
+        color: $primaryColor;
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        &::before {
+            color: $gray6;
+            font-size: 1.8125rem;
+        }
+    }
+
+    &__hidden-section {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        background: $white;
+        text-align: center;
+        border: 0.5px solid $gray4;
+    }
+
+    &__list {
+
+        & > *:not(:last-child) {
+            border-bottom: 0.5px solid $gray4;
+        }
+    }
+
+    &__list-value {
+        width: 100%;
+        padding: 0.88rem;
+        color: $primaryColor;
+
+        &_current {
+            background: $gray8;
+        }
+    }
+}
+
+.calendare-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.5px solid $gray4;
+
+    &__cell {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.91rem;
+        background: $gray3;
+        border: 0.5px solid $gray4;
+        color: $blue1;
+
+        &_title {
+            background: none;
+            color: $black;
+        }
+
+        &_empty {
+            background: none;
+            border: none;
+            border-top: 0.5px solid $gray4;
+            border-bottom: 0.5px solid $gray4;
+        }
+
+        &_opacity-active {
+            color: $primaryColor;
+            background: $blue2;
+        }
+
+        &_active {
+            background: $primaryColor;
+            color: $white;
+        }
+    }
+}
