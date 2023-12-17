@@ -25,8 +25,8 @@
                         <section class="calendare">
 
                             <!-- Input Section -->
-    
-                            <div class="input-section calendare__input-section">
+
+                            <div class="input-section calendare__input-section calendare__input-section_start">
     
                                 <div class="input-section__left-section">
     
@@ -36,15 +36,24 @@
                                         </span>
     
                                         <input type="text" placeholder="дд.мм.гггг" class="calendare-input__input">
+                                        <span class="calendare-input__value">
+                                            12 сентября 2023
+                                        </span>
                                     </div>
 
                                     <button class="input-section__open-popup-btn icon-ic-calendare"></button>
     
                                 </div>
     
-                                <div class="input-section__right-section none">
+                                <div class="input-section__right-section">
     
-                                    <button class="input-section__delete-btn"></button>
+                                    <button class="input-section__delete-btn icon-ic-skip"></button>
+
+                                    <div class="pop-up input-section__pop-up input-section__pop-up_start none">
+                                        <p class="pop-up__message">
+                                            Очистить поле?
+                                        </p>
+                                    </div>
     
                                 </div>
     
@@ -56,12 +65,12 @@
     
                             <div class="calendare__select-section">
     
-                                <div class="item-select calendare__item-select">
+                                <div class="item-select calendare__item-select calendare__item-select_start-year">
                                     <div class="item-select__open-section">
 
                                         <button class="item-select__arrow-btn item-select__arrow-btn_disabled item-select__arrow-btn_prev icon-ic-side-arrow"></button>
         
-                                        <button class="item-select__value icon-ic-down-arrow">
+                                        <button class="item-select__value icon-ic-down-arrow" data-value="">
                                             Выберите год
                                         </button>
         
@@ -72,27 +81,27 @@
                                     <div class="item-select__hidden-section none">
                                         <ul class="item-select__list">
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value item-select__list-value_current">
+                                                <button class="item-select__list-value" data-value="2023">
                                                     2023
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2022">
                                                     2022
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2021">
                                                     2021
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2020">
                                                     2020
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2019">
                                                     2019
                                                 </button>
                                             </li>
@@ -100,78 +109,78 @@
                                     </div>
                                 </div>
     
-                                <div class="item-select calendare__item-select">
+                                <div class="item-select calendare__item-select calendare__item-select_start-month">
                                     <div class="item-select__open-section">
 
                                         <button class="item-select__arrow-btn item-select__arrow-btn_prev icon-ic-side-arrow"></button>
         
-                                        <button class="item-select__value icon-ic-down-arrow">
+                                        <button class="item-select__value icon-ic-down-arrow" data-value="">
                                             Выберите месяц
                                         </button>
         
-                                        <button class="item-select__arrow-btn item-select__arrow-btn_next icon-ic-side-arrow"></button>
+                                        <i class="item-select__arrow-btn item-select__arrow-btn_next icon-ic-side-arrow"></i>
 
                                     </div>
                                     
                                     <div class="item-select__hidden-section none">
                                         <ul class="item-select__list">
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="0">
                                                     Январь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="1">
                                                     Февраль
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2">
                                                     Март
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="3">
                                                     Апрель
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="4">
                                                     Май
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="5">
                                                     Июнь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="6">
                                                     Июль
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="7">
                                                     Август
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="8">
                                                     Сентябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="9">
                                                     Октябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="10">
                                                     Ноябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value item-select__list-value_current">
+                                                <button class="item-select__list-value" data-value="11">
                                                     Декабрь
                                                 </button>
                                             </li>
@@ -183,7 +192,7 @@
     
                             <!-- Select Section End -->
     
-                            <!-- STable Section -->
+                            <!-- Table Section -->
     
                             <div class="calendare__table-section">
     
@@ -214,189 +223,7 @@
                                         </tr>
                                     </thead>
     
-                                    <tbody class="calendare-table__body">
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_opacity-active">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_active">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                        </tr>
-    
-                                    </tbody>
+                                    <tbody class="calendare-table__body calendare-table__body_start"></tbody>
                                 </table>
                                 
                             </div>
@@ -408,8 +235,8 @@
                         <section class="calendare">
 
                             <!-- Input Section -->
-    
-                            <div class="input-section input-section_blue calendare__input-section">
+
+                            <div class="input-section calendare__input-section calendare__input-section_end">
     
                                 <div class="input-section__left-section">
     
@@ -432,7 +259,7 @@
     
                                     <button class="input-section__delete-btn icon-ic-skip"></button>
 
-                                    <div class="pop-up input-section__pop-up none">
+                                    <div class="pop-up input-section__pop-up input-section__pop-up_end none">
                                         <p class="pop-up__message">
                                             Очистить поле?
                                         </p>
@@ -443,29 +270,17 @@
                             </div>
     
                             <!-- Input Section End -->
-
-                            <!-- Error Message -->
-
-                            <div class="error calendare__error none">
-
-                                <p class="error__message">
-                                    Выберите дату не позднее сегодняшнего дня
-                                </p>
-
-                            </div>
-
-                            <!-- Error Message End -->
     
                             <!-- Select Section -->
     
                             <div class="calendare__select-section">
     
-                                <div class="item-select calendare__item-select">
+                                <div class="item-select calendare__item-select calendare__item-select_end-year">
                                     <div class="item-select__open-section">
 
                                         <button class="item-select__arrow-btn item-select__arrow-btn_disabled item-select__arrow-btn_prev icon-ic-side-arrow"></button>
         
-                                        <button class="item-select__value icon-ic-down-arrow">
+                                        <button class="item-select__value icon-ic-down-arrow" data-value="">
                                             Выберите год
                                         </button>
         
@@ -476,27 +291,27 @@
                                     <div class="item-select__hidden-section none">
                                         <ul class="item-select__list">
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value item-select__list-value_current">
+                                                <button class="item-select__list-value" data-value="2023">
                                                     2023
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2022">
                                                     2022
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2021">
                                                     2021
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2020">
                                                     2020
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2019">
                                                     2019
                                                 </button>
                                             </li>
@@ -504,78 +319,78 @@
                                     </div>
                                 </div>
     
-                                <div class="item-select calendare__item-select">
+                                <div class="item-select calendare__item-select calendare__item-select_end-month">
                                     <div class="item-select__open-section">
 
                                         <button class="item-select__arrow-btn item-select__arrow-btn_prev icon-ic-side-arrow"></button>
         
-                                        <button class="item-select__value icon-ic-down-arrow">
+                                        <button class="item-select__value icon-ic-down-arrow" data-value="">
                                             Выберите месяц
                                         </button>
         
-                                        <button class="item-select__arrow-btn item-select__arrow-btn_next icon-ic-side-arrow"></button>
+                                        <i class="item-select__arrow-btn item-select__arrow-btn_next icon-ic-side-arrow"></i>
 
                                     </div>
                                     
                                     <div class="item-select__hidden-section none">
                                         <ul class="item-select__list">
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="0">
                                                     Январь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="1">
                                                     Февраль
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="2">
                                                     Март
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="3">
                                                     Апрель
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="4">
                                                     Май
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="5">
                                                     Июнь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="6">
                                                     Июль
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="7">
                                                     Август
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="8">
                                                     Сентябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="9">
                                                     Октябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value">
+                                                <button class="item-select__list-value" data-value="10">
                                                     Ноябрь
                                                 </button>
                                             </li>
                                             <li class="item-select__list-item">
-                                                <button class="item-select__list-value item-select__list-value_current">
+                                                <button class="item-select__list-value" data-value="11">
                                                     Декабрь
                                                 </button>
                                             </li>
@@ -587,7 +402,7 @@
     
                             <!-- Select Section End -->
     
-                            <!-- STable Section -->
+                            <!-- Table Section -->
     
                             <div class="calendare__table-section">
     
@@ -618,189 +433,7 @@
                                         </tr>
                                     </thead>
     
-                                    <tbody class="calendare-table__body">
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_opacity-active">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_active">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                        </tr>
-    
-                                        <tr class="calendare-table__row">
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell">
-                                                20
-                                            </td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                            <td class="calendare-table__cell calendare-table__cell_empty"></td>
-    
-                                        </tr>
-    
-                                    </tbody>
+                                    <tbody class="calendare-table__body calendare-table__body_end"></tbody>
                                 </table>
                                 
                             </div>

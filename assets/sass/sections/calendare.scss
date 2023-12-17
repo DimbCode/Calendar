@@ -21,6 +21,7 @@
         &_buttons {
             display: flex;
             justify-content: flex-end;
+            width: 100%;
         }
     }
 
@@ -43,8 +44,16 @@
         &_reset {
             color: $gray2;
 
+            &:hover {
+                opacity: 1;
+            }
+
             &_active {
                 color: $primaryColor;
+            }
+
+            &_active:hover {
+                text-decoration: underline;
             }
         }
 
@@ -52,6 +61,10 @@
             padding: 0.25rem 0.5rem;
             background: $gray2;
             color: $white;
+
+            &:hover {
+                opacity: 1;
+            }
 
             &_active {
                 background: $primaryColor;
@@ -68,6 +81,14 @@
 
     &__item-select {
         border-bottom: none !important;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:last-child {
+            border: 0.5px solid $gray4 !important;
+        }
     }
 }
 
@@ -78,7 +99,6 @@
     justify-content: space-between;
     border: 1px solid $gray4;
     gap: 0.25rem;
-    border-bottom: none;
 
     &_white {
         background: $white;
@@ -89,6 +109,7 @@
         .input-section__left-section {
             background: $blue2;
             padding: 0.59rem 0.81rem;
+            cursor: pointer;
         }
 
         .input-section__right-section {
@@ -109,7 +130,7 @@
     &_skip-open {
 
         .input-section__right-section {
-            display: flex;
+            display: flex !important;
         }
 
     }
@@ -117,7 +138,7 @@
     &__left-section {
         width: 100%;
         display: flex;
-        padding: 0.6rem 1.44rem;
+        padding: 0.59rem 1.44rem;
         align-items: center;
         justify-content: space-between;
         gap: 0.5rem;
@@ -132,6 +153,11 @@
 
     &__open-popup-btn {
         @extend %icon-btn;
+        cursor: default;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &__delete-btn {
@@ -284,6 +310,7 @@
     width: 100%;
     border-collapse: collapse;
     border: 0.5px solid $gray4;
+    border-top: none;
 
     &__cell {
         text-align: center;
@@ -292,10 +319,13 @@
         background: $gray3;
         border: 0.5px solid $gray4;
         color: $blue1;
+        cursor: pointer;
 
         &_title {
             background: none;
             color: $black;
+            cursor: default;
+            border-top: none;
         }
 
         &_empty {
@@ -303,6 +333,7 @@
             border: none;
             border-top: 0.5px solid $gray4;
             border-bottom: 0.5px solid $gray4;
+            padding: 1.6rem 0.91rem;
         }
 
         &_opacity-active {
@@ -311,8 +342,8 @@
         }
 
         &_active {
-            background: $primaryColor;
-            color: $white;
+            background: $primaryColor !important;
+            color: $white !important;
         }
     }
 }

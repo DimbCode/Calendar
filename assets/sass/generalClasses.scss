@@ -40,28 +40,41 @@
 
 .pop-up {
     position: absolute;
-    top: calc(100% + 0.8125rem);
+    top: calc(100% + 1.6125rem);
     left: 50%;
-    z-index: 1;
     transform: translate(-50%, 0);
     padding: 0.7rem 1.2rem;
-    background: $blue2;
-    border: 1px solid $primaryColor;
+    z-index: 100;
 
     &::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 50%;
+        top: -34%;
+        left: 42.5%;
         transform: translate(calc(-50% - 1.875rem), -50%);
         transform: rotate(-45deg);
         height: 1.875rem;
         width: 1.875rem;
         background: $blue2;
         border: 1px solid $primaryColor;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $primaryColor;
+        background: $blue2;
+        z-index: 2;
     }
 
     &__message {
         color: $gray1;
+        position: relative;
+        z-index: 3;
     }
 }

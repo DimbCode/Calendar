@@ -245,20 +245,18 @@ a:hover, button:hover {
 
 .pop-up {
   position: absolute;
-  top: calc(100% + 0.8125rem);
+  top: calc(100% + 1.6125rem);
   left: 50%;
-  z-index: 1;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   padding: 0.7rem 1.2rem;
-  background: #D4F6FF;
-  border: 1px solid #2961FE;
+  z-index: 100;
 }
 .pop-up::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: -34%;
+  left: 42.5%;
   -webkit-transform: translate(calc(-50% - 1.875rem), -50%);
           transform: translate(calc(-50% - 1.875rem), -50%);
   -webkit-transform: rotate(-45deg);
@@ -267,9 +265,23 @@ a:hover, button:hover {
   width: 1.875rem;
   background: #D4F6FF;
   border: 1px solid #2961FE;
+  z-index: 1;
+}
+.pop-up::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #2961FE;
+  background: #D4F6FF;
+  z-index: 2;
 }
 .pop-up__message {
   color: #434C4E;
+  position: relative;
+  z-index: 3;
 }
 
 .calendare-block {
@@ -299,6 +311,7 @@ a:hover, button:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 100%;
 }
 .calendare-block__buttons {
   margin-top: 0.2rem;
@@ -320,13 +333,22 @@ a:hover, button:hover {
 .calendare-block__btn_reset {
   color: #B2B4B4;
 }
+.calendare-block__btn_reset:hover {
+  opacity: 1;
+}
 .calendare-block__btn_reset_active {
   color: #2961FE;
+}
+.calendare-block__btn_reset_active:hover {
+  text-decoration: underline;
 }
 .calendare-block__btn_apply {
   padding: 0.25rem 0.5rem;
   background: #B2B4B4;
   color: white;
+}
+.calendare-block__btn_apply:hover {
+  opacity: 1;
 }
 .calendare-block__btn_apply_active {
   background: #2961FE;
@@ -334,6 +356,12 @@ a:hover, button:hover {
 
 .calendare__item-select {
   border-bottom: none !important;
+}
+.calendare__item-select:first-child {
+  border-top: none;
+}
+.calendare__item-select:last-child {
+  border: 0.5px solid #969FA8 !important;
 }
 
 .input-section {
@@ -347,7 +375,6 @@ a:hover, button:hover {
           justify-content: space-between;
   border: 1px solid #969FA8;
   gap: 0.25rem;
-  border-bottom: none;
 }
 .input-section_white {
   background: white;
@@ -355,6 +382,7 @@ a:hover, button:hover {
 .input-section_blue .input-section__left-section {
   background: #D4F6FF;
   padding: 0.59rem 0.81rem;
+  cursor: pointer;
 }
 .input-section_blue .input-section__right-section {
   background: #D4F6FF;
@@ -369,16 +397,16 @@ a:hover, button:hover {
   display: inline-block;
 }
 .input-section_skip-open .input-section__right-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 .input-section__left-section {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.6rem 1.44rem;
+  padding: 0.59rem 1.44rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -392,6 +420,12 @@ a:hover, button:hover {
   width: 100%;
   position: relative;
   display: none;
+}
+.input-section__open-popup-btn {
+  cursor: default;
+}
+.input-section__open-popup-btn:hover {
+  opacity: 1;
 }
 .input-section__delete-btn {
   width: 100%;
@@ -549,6 +583,7 @@ a:hover, button:hover {
   width: 100%;
   border-collapse: collapse;
   border: 0.5px solid #969FA8;
+  border-top: none;
 }
 .calendare-table__cell {
   text-align: center;
@@ -557,22 +592,26 @@ a:hover, button:hover {
   background: #F6F6F6;
   border: 0.5px solid #969FA8;
   color: #6CA3FE;
+  cursor: pointer;
 }
 .calendare-table__cell_title {
   background: none;
   color: #000000;
+  cursor: default;
+  border-top: none;
 }
 .calendare-table__cell_empty {
   background: none;
   border: none;
   border-top: 0.5px solid #969FA8;
   border-bottom: 0.5px solid #969FA8;
+  padding: 1.6rem 0.91rem;
 }
 .calendare-table__cell_opacity-active {
   color: #2961FE;
   background: #D4F6FF;
 }
 .calendare-table__cell_active {
-  background: #2961FE;
-  color: white;
+  background: #2961FE !important;
+  color: white !important;
 }
